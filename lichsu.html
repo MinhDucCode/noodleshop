@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="icon" type="image/jpg" href="images/logo2.jpg" class="icon-logo-tab" />
+  <link rel="stylesheet" href="style/stylelichsu.css">
+  <script src="backend/app.js"></script>
+  <script src="backend/script.js"></script>
+  <script src="backend/usehtml.js"></script>
+  <title>Lịch sử mua hàng</title>
+</head>
+<body>
+  <script> headerNav() </script>
+  <main class="home">
+    <h1>Lịch sử mua hàng</h1>
+    <table class="purchase-history-table">
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Thời gian mua</th>
+          <th>Sản phẩm</th>
+          <th>Hình ảnh</th>
+          <th>Giá tiền</th>
+          <th>Số lượng</th>
+        </tr>
+      </thead>
+      <tbody id="history-list">
+        <!-- Purchase history will be populated here -->
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>

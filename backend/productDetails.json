@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "thongTin": {
+      "khoiLuong": "120g/gói",
+      "giaBan": "19.700",
+      "hanSuDung": "12 tháng từ ngày sản xuất."
+    },
+    "dinhDuong": {
+      "nangLuong": "250kcal",
+      "chatDam": "5g",
+      "chatBeo": ">10%",
+      "carbohydrate": "40g"
+    },
+    "thanhPhan": {
+      "mi": "Bột mì, dầu cọ, tinh bột khoai tây biến tính, tinh bột biến tính, gluten, chiết xuất tỏi, hỗn hợp dầu nhũ tương (dầu đậu nành, chất ổn định, chất nhũ hóa (glycerin este của axit béo), canxi, muối, chất điều chỉnh độ acid, màu thực phẩm, men khô.",
+      "giavi": "Muối, đường, bột nước tương, bột chiết xuất xương chân bò, ớt, glucose, bột chiết xuất rong biển, bột men, tỏi, tiêu đen, nấm, bột chiết xuất thịt bò, màu thực phẩm (oleoresin paprika), hàu."
+    },
+    "cachDung": {
+      "b1": "Cho mì và các gói gia vị vào tô 550ml nước.",
+      "b2": "Nấu sôi trong 4 phút.",
+      "b3": "Sau đó trộn đều và dùng ngay."
+    },
+    "cachBaoQuan": "Bảo quản nơi khô ráo, thoáng mát."
+  },
+  {
+    "id": "2",
+    "thongTin": {
+      "khoiLuong": "140g/gói",
+      "giaBan": "13.200",
+      "hanSuDung": "12 tháng từ ngày sản xuất."
+    },
+    "dinhDuong": {
+      "nangLuong": "350kcal",
+      "chatDam": "5g",
+      "chatBeo": ">10%",
+      "carbohydrate": "40g"
+    },
+    "thanhPhan": {
+      "mi": "Bột mì, dầu cọ, tinh bột khoai tây biến tính, tinh bột biến tính, gluten, chiết xuất tỏi, hỗn hợp dầu nhũ tương (dầu đậu nành, chất ổn định, chất nhũ hóa (glycerin este của axit béo), canxi, muối, chất điều chỉnh độ acid, màu thực phẩm, men khô.",
+      "giavi": "Muối, đường, bột nước tương, bột chiết xuất xương chân bò, ớt, glucose, bột chiết xuất rong biển, bột men, tỏi, tiêu đen, nấm, bột chiết xuất thịt bò, màu thực phẩm (oleoresin paprika), hàu."
+    },
+    "cachDung": {
+      "b1": "Cho mì và các gói gia vị vào tô 550ml nước.",
+      "b2": "Nấu sôi trong 4 phút.",
+      "b3": "Sau đó trộn đều và dùng ngay."
+    },
+    "cachBaoQuan": "Bảo quản nơi khô ráo, thoáng mát."
+  }
+]

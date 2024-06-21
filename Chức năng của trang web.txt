@@ -1,0 +1,13 @@
+- Có thể thêm sản phẩm vào giỏ hàng, nhập số lượng sản phẩm từ chi tiết sản phẩm
+
+- Thanh toán từng sản phẩm riêng biệt, xóa sản phẩm
+
+- Lịch sử mua hàng
+
+- Thay đổi hình ảnh cá nhân trong mục cài đặt
+
+- Chức năng đăng nhập, đăng ký (Tạo thông báo đăng ký, đăng nhập thành công, chưa xử lý lưu người dùng và lịch sử mua hàng)
+
+- Góp ý được chuyển vể trang admin và đọc được lại góp ý
+
+- Trang admin có thể thêm sản phẩm mới vào trang chủ, xóa sản phẩm mới đã thêm

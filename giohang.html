@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/jpg" href="images/logo2.jpg" class="icon-logo-tab" />
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/styleGioHang.css">
+  <script src="backend/app.js"></script>
+  <script src="backend/script.js"></script>
+  <script src="backend/usehtml.js"></script>
+  <title>Danh sách giỏ hàng</title>
+</head>
+<body>
+  <script> headerNav() </script>
+  <main class="home">
+    <section class="cart1">
+      <h1>Danh sách giỏ hàng</h1>
+      <table id="cart-table">
+        <thead>
+          <tr>
+            <th>Chọn</th>
+            <th>Số thứ tự</th>
+            <th>Tên sản phẩm</th>
+            <th>Hình ảnh sản phẩm</th>
+            <th>Số lượng</th>
+            <th>Số tiền</th>
+            <th>Thao tác</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Dữ liệu sản phẩm trong giỏ hàng sẽ được thêm vào đây -->
+        </tbody>
+      </table>
+      <div class="cart-buttons">
+        <button id="clear-cart-btn">Xóa tất cả sản phẩm</button>
+        <button onclick="window.location.href = 'index.html';">Mua thêm hàng</button>
+        <button id="checkout-btn">Thanh toán sản phẩm</button>
+        <button id="checkout-all-btn">Thanh toán toàn bộ sản phẩm</button>
+      </div>
+    </section>
+    <div id="success-message"></div>
+  </main>
+</body>
+</html>

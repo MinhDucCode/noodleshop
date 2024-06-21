@@ -1,0 +1,98 @@
+[
+    {
+        "id": "1",
+        "name": "Mì Jin Cay",
+        "image": "images/mijincay.jpg",
+        "rating": 4.3,
+        "sold": 752,
+        "price": 19700
+    },
+    {
+        "id": "2",
+        "name": "Mì Khô Gà Cay",
+        "image": "images/mikhogacay.jpg",
+        "rating": 4.0,
+        "sold": 1241,
+        "price": 11200
+    },
+    {
+        "id": "3",
+        "name": "Mì 3 Miền",
+        "image": "images/3mien.jpg",
+        "rating": 4.7,
+        "sold": 3498,
+        "price": 4500
+    },
+    {
+        "id": "4",
+        "name": "Mì Hảo Hảo",
+        "image": "images/haohao.jpg",
+        "rating": 4.5,
+        "sold": 3458,
+        "price": 5000
+    },
+    {
+        "id": "5",
+        "name": "Mì KoKomi",
+        "image": "images/kokomi.jpg",
+        "rating": 4.0,
+        "sold": 7285,
+        "price": 3500
+    },
+    {
+        "id": "6",
+        "name": "Mì Lẩu Thái",
+        "image": "images/milauthai.jpg",
+        "rating": 4.2,
+        "sold": 2342,
+        "price": 2500
+    },
+    {
+        "id": "7",
+        "name": "Mì Koreno",
+        "image": "images/mikoreno.jpg",
+        "rating": 4.8,
+        "sold": 2778,
+        "price": 7500
+    },
+    {
+        "id": "8",
+        "name": "Mì Tương Đen Big Size",
+        "image": "images/mituongden.jpg",
+        "rating": 4.1,
+        "sold": 524,
+        "price": 9000
+    },
+    {
+        "id": "9",
+        "name": "Mì Hảo Hảo Big Size",
+        "image": "images/haohao.jpg",
+        "rating": 4.5,
+        "sold": 232,
+        "price": 6000
+    },
+    {
+        "id": "10",
+        "name": "Mì Tương Đen",
+        "image": "images/mituongden.jpg",
+        "rating": 3.9,
+        "sold": 4821,
+        "price": 7600
+    },
+    {
+        "id": "11",
+        "name": "Mì Kim Chi",
+        "image": "images/mikimchi.jpg",
+        "rating": 4.4,
+        "sold": 7525,
+        "price": 8400
+    },
+    {
+        "id": "12",
+        "name": "Mì Cung Đình",
+        "image": "images/micungdinh.jpg",
+        "rating": 4.1,
+        "sold": 4212,
+        "price": 7500
+    }
+]

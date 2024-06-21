@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/stylegopy.css">
+  <script src="backend/app.js"></script>
+  <script src="backend/usehtml.js"></script>
+  <link rel="icon" type="image/jpg" href="images/logo2.jpg" class="icon-logo-tab" />
+  <title>Contact and Feedback</title>
+</head>
+<body>
+  <script>headerNav()</script>
+  <main class="home">
+    <h2>Góp Ý</h2>
+    <form id="feedback-form">
+      <label for="name">Họ và Tên:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+      <label for="phone">Số Điện Thoại:</label><br>
+      <input type="tel" id="phone" name="phone" required><br><br>
+      <label for="feedback">Góp Ý:</label><br>
+      <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea><br><br>
+      <input type="submit" value="Gửi">
+    </form>
+    <footer class="contact-info">
+      <span>Phone: +84975954534</span>
+      <span>Email: vuminhduc.contact@gmail.com</span>
+      <span>Github:<a href="https://github.com/minhduccode" target="_blank">https://github.com/minhduccode</a></span>
+    </footer>
+  </main>
+  <script src="backend/script.js"></script>
+  <script src="backend/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/jpg" href="images/logo2.jpg" class="icon-logo-tab" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Information</title>
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/styleDetails.css">
+  <script src="backend/app.js"></script>
+  <script src="backend/usehtml.js"></script>
+  <script src="backend/script.js" defer></script>
+</head>
+<body>
+  <script>headerNav()</script>
+  <section class="home">
+    <main class="product-page">
+      <div class="product-container">
+        <div class="product-images">
+          <img src="images/mijincay.jpg" alt="Mì Jin Cay">
+          <div class="thumbnail-container">
+            <img src="images/mijincay.jpg" alt="Thumbnail 1">
+            <img src="images/mijincay.jpg" alt="Thumbnail 2">
+            <img src="images/mijincay.jpg" alt="Thumbnail 3">
+          </div>
+        </div>
+        <div class="product-details">
+          <h1>Mì Jin Cay</h1>
+          <span class="price">19,700đ </span>
+          <span class="status">Sẵn có: <span class="stock-status">còn hàng</span></span>
+          <div class="rating">
+            <span>4.3</span>
+            <i class="bx bx-star"></i>
+          </div>
+          <div class="short-description">
+            <p>Vị cay buldak kết hợp với vị thơm béo của sữa.</p>
+            <p>Nhập khẩu từ Hàn Quốc</p>
+          </div>
+          <div class="quantity-container">
+            <label for="quantity">Số lượng</label>
+            <input type="number" class="product-quantity" value="1" min="1">
+          </div>
+          <input type="submit" class="add-to-cart-btn" value="Thêm vào giỏ hàng"
+                data-id="1"
+                data-name="Mì Jin Cay"
+                data-image="images/mijincay.jpg"
+                data-rating="19,700"
+                data-price="19,700">
+        </div>
+      </div>
+      <div class="tabs">
+        <button class="tab-link active" onclick="openTab(event, 'product-info')">Thông tin sản phẩm</button>
+        <button class="tab-link" onclick="openTab(event, 'nutrition-info')">Thông số dinh dưỡng</button>
+        <button class="tab-link" onclick="openTab(event, 'ingredients')">Thành phần</button>
+        <button class="tab-link" onclick="openTab(event, 'storage')">Cách bảo quản</button>
+      </div>
+      <div id="product-info" class="tab-content active">
+        <section>
+          <h3>Thông tin chung</h3>
+          <p>Khối lượng tịnh: 120g/gói</p>
+          <p>Giá bán lẻ: 19.700đ/gói</p>
+          <p>Hạn sử dụng: 12 tháng từ ngày sản xuất</p>
+        </section>
+      </div>
+
+      <div id="nutrition-info" class="tab-content">
+        <h2>Thông số dinh dưỡng</h2>
+        <section>
+          <ul>
+            <li>Giá trị năng lượng: 250kcal</li>
+            <li>Chất béo: > 10%</li>
+            <li>Carbohydrate: 40g</li>
+            <li>Chất đạm: 5g</li>
+          </ul>
+        </section>
+      </div>
+
+      <div id="ingredients" class="tab-content">
+        <h2>Thành phần</h2>
+        <section>
+          <h3>Mì</h3>
+          <p>Bột mì, dầu cọ, tinh bột khoai tây biến tính, tinh bột biến tính, gluten, chiết xuất tỏi, hỗn hợp dầu nhũ tương dầu đậu nành, chất ổn định, chất nhũ hóa (glycerin este của axit béo), canxi, muối, chất điều chỉnh độ acid, màu thực phẩm, men khô.</p>
+          <h3>Bột súp</h3>
+          <p>Muối, đường, bột nước tương, bột chiết xuất xương chân bò, ớt, glucose, bột chiết xuất rong biển, bột men, tỏi, tiêu đen, nấm, bột chiết xuất thịt bò, màu thực phẩm (oleoresin paprika), hàu.</p>
+          <h3>Hỗn hợp rau sấy khô</h3>
+          <p>Hành baro, nấm, cải bắp, ớt, cà rốt.</p>
+        </section>
+      </div>
+
+      <div id="storage" class="tab-content">
+        <h2>Cách bảo quản</h2>
+        <section>
+          <p>Bảo quản nơi khô ráo, thoáng mát.</p>
+        </section>
+      </div>
+
+      <div class="related-products">
+        <h2>Sản phẩm tương tự</h2>
+        <div class="related-product-container">
+          <div class="related-product">
+            <img src="images/mikoreno.jpg" alt="Mì Koreno">
+            <h3>Mì Koreno</h3>
+            <span class="price">7,500đ</span>
+            <input type="submit" class="add-to-cart-btn" value="Thêm vào giỏ hàng"
+                data-id="6"
+                data-name="Mì Koreno"
+                data-image="images/mikoreno.jpg"
+                data-rating="7,500"
+                data-price="7,500">
+          </div>
+          <div class="related-product">
+            <img src="images/3mien.jpg" alt="Mì 3 Miền">
+            <h3>Mì 3 Miền</h3>
+            <span class="price">4,500đ</span>
+            <input type="submit" class="add-to-cart-btn" value="Thêm vào giỏ hàng"
+                data-id="3"
+                data-name="Mì 3 Miền"
+                data-image="images/3mien.jpg"
+                data-rating="4,500"
+                data-price="4,500">
+          </div>
+
+          <div class="related-product">
+            <img src="images/kokomi.jpg" alt="Mì Kokomi">
+            <h3>Mì Kokomi</h3>
+            <span class="price">3,500đ</span>
+            <div class="add-cart">
+              <input type="submit" class="add-to-cart-btn" value="Thêm vào giỏ hàng"
+                data-id="5"
+                data-name="Mì Kokomi"
+                data-image="images/kokomi.jpg"
+                data-rating="3,500"
+                data-price="3,500">
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </section>
+</body>
+</html>

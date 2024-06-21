@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="images/logo2.jpg" class="icon-logo-tab" />
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/styleDark.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style/styleIndex.css">
+    <script src="backend/script.js"></script>
+    <script src="backend/app.js"></script>
+    <script src="backend/newJson.js"></script>
+    <script src="backend/usehtml.js"></script>
+    <title>Shop Bán Mì Gói</title>
+</head>
+
+<body>
+    <div id="login-message" class="login-message" style="display: none; background-color: #f8d7da; color: #721c24; text-align: center; padding: 10px;">
+        Vui lòng đăng nhập để sử dụng chức năng.
+    </div>
+    <script>headerNav()</script>
+    <section class="home">
+        <div class="text">
+            <input type="submit" value="Tất cả" onclick="">
+            <input type="submit" value="Mì cay" onclick="">
+            <input type="submit" value="Mì Spageti" onclick="">
+            <input type="submit" value="Mì Hảo Hảo" onclick="">
+            <input type="submit" value="Mì Lẩu Thái" onclick="">
+            <input type="submit" value="Mì Kokomi" onclick="">
+            <input type="submit" value="Mì chua cay" onclick="">
+            <input type="submit" value="Mì Jin" onclick="">
+            <input type="submit" value="Mì Hàn Quốc" onclick="">
+            <input type="submit" value="Mì Ricey" onclick="">
+        </div>
+        <div class="banner">
+            <img src="images/banner.jpg"/>
+        </div>
+        <div class="navbar-si">
+            <button>Liên Quan</button>
+            <button>Mới Nhất</button>
+            <button>Bán Chạy</button>
+            <select>
+                <option>Giá</option>
+                <option>Giá: Thấp đến Cao</option>
+                <option>Giá: Cao đến Thấp</option>
+            </select>
+            <select>
+                <option>Khuyến Mãi</option>
+                <option>Giảm cực sốc</option>
+                <option>Đồng giá 9k</option>
+            </select>
+            <div class="page-indicator">
+                <span>1/17</span>
+                <button>&lt;</button>
+                <button>&gt;</button>
+            </div>
+        </div>
+        <div class="all-images" id="product-list">
+            <!-- Danh sách sản phẩm sẽ được thêm vào đây -->
+        </div>
+    </section>
+
+</body>
+
+</html>

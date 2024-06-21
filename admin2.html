@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/styleInput.css">
+  <title>Admin - Thêm sản phẩm mới</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="admin1.html">Xem góp ý</a></li>
+        <li><a href="admin2.html">Thêm sản phẩm</a></li>
+      </ul>
+    </nav>
+  </header>
+  <h2>Thêm sản phẩm mới</h2>
+  <div class="main">
+    <form id="addItemForm" class="input-details">
+      <label for="id">ID:</label>
+      <input type="number" id="id" name="id" required><br><br>
+
+      <label for="name">Tên sản phẩm:</label>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="image">Link ảnh:</label>
+      <input type="text" id="image" name="image" required><br><br>
+
+      <label for="rating">Đánh giá:</label>
+      <input type="number" id="rating" name="rating" step="0.1" required><br><br>
+
+      <label for="sold">Số lượng đã bán:</label>
+      <input type="number" id="sold" name="sold" required><br><br>
+
+      <label for="price">Giá tiền:</label>
+      <input type="number" id="price" name="price" required><br><br>
+
+      <button type="submit">Thêm sản phẩm</button>
+    </form>
+
+    <div class="display-details">
+      <h2>Danh sách sản phẩm đã thêm</h2>
+      <table id="productTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Tên sản phẩm</th>
+            <th>Link ảnh</th>
+            <th>Đánh giá</th>
+            <th>Số lượng đã bán</th>
+            <th>Giá tiền</th>
+            <th>Xóa</th>
+          </tr>
+        </thead>
+        <tbody id="product-list1">
+          <!-- Các sản phẩm sẽ được thêm vào đây -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var menuItems = JSON.parse(localStorage.getItem('menuItems')) || [];
+      var deletedProductIds = JSON.parse(localStorage.getItem('deletedProductIds')) || [];
+      var productList = document.getElementById('product-list1');
+
+      function displayProducts() {
+        while (productList.firstChild) {
+          productList.removeChild(productList.firstChild);
+        }
+        menuItems.forEach(function (item) {
+          if (!deletedProductIds.includes(item.id)) {
+            addDetailsIndex(item);
+          }
+        });
+      }
+
+      displayProducts();
+
+      function addDetailsIndex(item) {
+        var tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>${item.id}</td>
+          <td>${item.name}</td>
+          <td>${item.image}</td>
+          <td>${item.rating}</td>
+          <td>${item.sold}</td>
+          <td>${item.price.toLocaleString()} đ</td>
+          <td><button class="delete-button" onclick="deleteProduct('${item.id}')">Xóa</button></td>
+        `;
+        productList.appendChild(tr);
+      }
+
+      document.getElementById('addItemForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+        var id = document.getElementById('id').value.trim();
+        var name = document.getElementById('name').value.trim();
+        var image = document.getElementById('image').value.trim();
+        var rating = parseFloat(document.getElementById('rating').value);
+        var sold = parseInt(document.getElementById('sold').value);
+        var price = parseInt(document.getElementById('price').value);
+
+        if (!id || !name || !image || isNaN(rating) || isNaN(sold) || isNaN(price)) {
+          alert('Vui lòng điền đầy đủ thông tin và nhập đúng định dạng cho các trường.');
+          return;
+        }
+
+        var newItem = {
+          "id": id,
+          "name": name,
+          "image": image,
+          "rating": rating,
+          "sold": sold,
+          "price": price
+        };
+        menuItems.push(newItem);
+        localStorage.setItem('menuItems', JSON.stringify(menuItems));
+
+        addDetailsIndex(newItem);
+
+        this.reset();
+      });
+
+      function deleteProduct(productId) {
+        menuItems = menuItems.filter(function (item) {
+          return item.id !== productId;
+        });
+
+        deletedProductIds.push(productId);
+
+        localStorage.setItem('menuItems', JSON.stringify(menuItems));
+        localStorage.setItem('deletedProductIds', JSON.stringify(deletedProductIds));
+
+        displayProducts();
+      }
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var menuItems = JSON.parse(localStorage.getItem('menuItems')) || [];
+      var deletedProductIds = JSON.parse(localStorage.getItem('deletedProductIds')) || [];
+      var productList = document.getElementById('product-list1');
+
+      function displayProducts() {
+        while (productList.firstChild) {
+          productList.removeChild(productList.firstChild);
+        }
+
+        menuItems.forEach(function (item) {
+          if (!deletedProductIds.includes(item.id)) {
+            addDetailsIndex(item);
+          }
+        });
+      }
+
+      displayProducts();
+
+      function addDetailsIndex(item) {
+        var tr = document.createElement('tr');
+        tr.innerHTML = `
+      <td>${item.id}</td>
+      <td>${item.name}</td>
+      <td>${item.image}</td>
+      <td>${item.rating}</td>
+      <td>${item.sold}</td>
+      <td>${item.price.toLocaleString()} đ</td>
+      <td><button class="delete-button" data-id="${item.id}">Xóa</button></td>
+    `;
+        productList.appendChild(tr);
+      }
+
+      productList.addEventListener('click', function (event) {
+        if (event.target.classList.contains('delete-button')) {
+          var productId = event.target.getAttribute('data-id');
+          deleteProduct(productId);
+        }
+      });
+
+      function deleteProduct(productId) {
+        menuItems = menuItems.filter(function (item) {
+          return item.id !== productId;
+        });
+
+        deletedProductIds.push(productId);
+
+        localStorage.setItem('menuItems', JSON.stringify(menuItems));
+        localStorage.setItem('deletedProductIds', JSON.stringify(deletedProductIds));
+
+        displayProducts();
+      }
+    });
+
+  </script>
+</body>
+
+</html>

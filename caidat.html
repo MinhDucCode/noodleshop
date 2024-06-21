@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Management</title>
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/styleSetting.css">
+  <script src="backend/script.js"></script>
+  <script src="backend/usehtml.js"></script>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/boxicons@2.1.1/css/boxicons.min.css'>
+</head>
+
+<body>
+  <script>headerNav()</script>
+  <main class="home">
+  <div class="custom-container">
+    <div class="custom-main-content">
+      <h1>Hồ Sơ Của Tôi</h1>
+      <p>Quản lý thông tin hồ sơ để bảo mật tài khoản</p>
+      <form>
+        <div class="custom-form-group">
+          <label for="username">Tên đăng nhập</label>
+          <input type="text" id="username" value="vmd12368" disabled>
+        </div>
+        <div class="custom-form-group">
+          <label for="name">Tên</label>
+          <input type="text" id="name" value="Đức">
+        </div>
+        <div class="custom-form-group">
+          <label for="email">Email</label>
+          <input type="text" id="email" value="du******@gmail.com" disabled>
+          <a href="#">Thay Đổi</a>
+        </div>
+        <div class="custom-form-group">
+          <label for="phone">Số điện thoại</label>
+          <input type="text" id="phone" value="********34" disabled>
+          <a href="#">Thay Đổi</a>
+        </div>
+        <div class="custom-form-group">
+          <label for="gender">Giới tính</label>
+          <input type="radio" id="male" name="gender" value="male">Nam
+          <input type="radio" id="female" name="gender" value="female">Nữ
+          <input type="radio" id="other" name="gender" value="other">Khác
+        </div>
+        <div class="custom-form-group">
+          <label for="birthdate">Ngày sinh</label>
+          <input type="text" id="birthdate" value="**/11/20**" disabled>
+          <a href="#">Thay Đổi</a>
+        </div>
+        <button type="submit">Lưu</button>
+      </form>
+    </div>
+    <div class="custom-profile-pic">
+      <img src="images/logo2.jpg" alt="Profile Picture">
+      <input type="file" value="Chọn ảnh">
+      <p>Dung lượng file tối đa 1 MB</p>
+      <p>Định dạng: JPEG, PNG</p>
+    </div>
+  </div>
+</main>
+</body>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const fileInput = document.querySelector('.custom-profile-pic input[type="file"]');
+    const profilePic = document.querySelector('.custom-profile-pic img');
+
+    fileInput.addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                profilePic.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+});
+
+</script>
+</html>

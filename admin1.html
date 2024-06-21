@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/styleAdmin.css">
+  <script src="backend/admin.js"></script>
+  <script src="backend/app.js"></script>
+  <script src="backend/script.js"></script>
+  <link rel="icon" type="image/jpg" href="images/logo2.jpg" class="icon-logo-tab" />
+  <title>Lịch sử góp ý</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="admin1.html">Xem góp ý</a></li>
+        <li><a href="admin2.html">Thêm sản phẩm</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="tab-link active">
+      <h2>Lịch sử góp ý</h2>
+      <div id="feedback-list">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Tên</th>
+              <th>Email</th>
+              <th>Phản hồi</th>
+              <th>Ngày</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Các dòng phản hồi sẽ được thêm vào đây -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      loadFeedback();
+      displayFeedback();
+    });
+  </script>
+</body>
+
+</html>
